@@ -1,0 +1,405 @@
+# Instincts generated from https://github.com/gclm/Chat2DB
+# Generated: 2026-07-14T09:54:58.996Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: Chat2DB-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/gclm/Chat2DB
+---
+
+# Chat2DB Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: chore, feat
+
+## Evidence
+
+- 3 commits analyzed
+- Detected conventional commit pattern
+- Examples: chore: prepare repository for community migration, feat: release Chat2DB Community 4.0.0
+
+---
+id: Chat2DB-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/gclm/Chat2DB
+---
+
+# Chat2DB Commit Length
+
+## Action
+
+Keep commit messages concise (~45 characters)
+
+## Evidence
+
+- Average commit message length: 45 chars
+- Based on 3 commits
+
+---
+id: Chat2DB-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/Chat2DB
+---
+
+# Chat2DB Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: Chat2DB-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/Chat2DB
+---
+
+# Chat2DB Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: Chat2DB-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/Chat2DB
+---
+
+# Chat2DB Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: Chat2DB-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/gclm/Chat2DB
+---
+
+# Chat2DB Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: 
+
+---
+id: Chat2DB-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/gclm/Chat2DB
+---
+
+# Chat2DB Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: Chat2DB-workflow-repository-migration-or-major-release
+trigger: "when doing repository migration or major release"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/Chat2DB
+---
+
+# Chat2DB Workflow Repository Migration Or Major Release
+
+## Action
+
+Follow the repository-migration-or-major-release workflow:
+1. Remove or archive legacy files and configuration (e.g., .github, docs, Docker, scripts).
+2. Add or update core source files and assets (e.g., src/, public/, assets/).
+3. Update or add project metadata and documentation (e.g., README, LICENSE, CONTRIBUTING).
+4. Update or add workflow and CI/CD configuration files.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .github/**, docker/**, document/**
+
+---
+id: chat2db-instinct-naming-files
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/Chat2DB
+---
+
+# Chat2db Instinct Naming Files
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+
+---
+id: chat2db-instinct-naming-functions
+trigger: "When defining a function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/Chat2DB
+---
+
+# Chat2db Instinct Naming Functions
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: chat2db-instinct-naming-classes
+trigger: "When defining a class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/Chat2DB
+---
+
+# Chat2db Instinct Naming Classes
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: chat2db-instinct-naming-constants
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/Chat2DB
+---
+
+# Chat2db Instinct Naming Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: chat2db-instinct-import-style
+trigger: "When importing modules in TypeScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/Chat2DB
+---
+
+# Chat2db Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: chat2db-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/Chat2DB
+---
+
+# Chat2db Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: chat2db-instinct-test-file-pattern
+trigger: "When creating a test file"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: gclm/Chat2DB
+---
+
+# Chat2db Instinct Test File Pattern
+
+## Action
+
+Name the file with a .test.ts suffix
+
+## Evidence
+
+- Pattern in testing.filePattern
+
+---
+id: chat2db-instinct-test-type
+trigger: "When writing tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: gclm/Chat2DB
+---
+
+# Chat2db Instinct Test Type
+
+## Action
+
+Write unit tests
+
+## Evidence
+
+- Pattern in testing.testTypes
+
+---
+id: chat2db-instinct-commit-format
+trigger: "When making a commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: gclm/Chat2DB
+---
+
+# Chat2db Instinct Commit Format
+
+## Action
+
+Use conventional commit format with a prefix (e.g., chore: or feat:), followed by a concise message (~45 chars)
+
+## Evidence
+
+- Seen in commit 'chore: prepare repository for community migration'
+- Seen in commit 'feat: release Chat2DB Community 4.0.0'
+- Pattern in commits.prefixes and commits.averageLength
+
+---
+id: chat2db-instinct-commit-chore
+trigger: "When making non-feature, non-fix changes (e.g., maintenance, config, docs)"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: gclm/Chat2DB
+---
+
+# Chat2db Instinct Commit Chore
+
+## Action
+
+Use 'chore:' as the commit prefix
+
+## Evidence
+
+- Seen in commit 'chore: prepare repository for community migration'
+- Pattern in commits.prefixes
+
+---
+id: chat2db-instinct-commit-feat
+trigger: "When adding a new feature"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: gclm/Chat2DB
+---
+
+# Chat2db Instinct Commit Feat
+
+## Action
+
+Use 'feat:' as the commit prefix
+
+## Evidence
+
+- Seen in commit 'feat: release Chat2DB Community 4.0.0'
+- Pattern in commits.prefixes
+
+---
+id: chat2db-instinct-workflow-migration
+trigger: "When preparing for a major community migration or a new major release"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: gclm/Chat2DB
+---
+
+# Chat2db Instinct Workflow Migration
+
+## Action
+
+Execute the migration workflow: remove/archive legacy files, update/add core source files and assets, update/add project metadata and documentation, update/add workflow and CI/CD configuration files
+
+## Evidence
+
+- Pattern in workflows[0] and detailed commit sequences
+- Example commits and files in repository-migration-or-major-release workflow
+
